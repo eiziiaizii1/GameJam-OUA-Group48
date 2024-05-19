@@ -43,7 +43,7 @@ public class enemyType1MovementAndShoot : MonoBehaviour
 
         if (canMove)
         {
-            Invoke("NPCTarget", 1f);
+            NPCTarget();
         }
 
         speedVelocity = rb2.velocity.x;
@@ -89,7 +89,7 @@ public class enemyType1MovementAndShoot : MonoBehaviour
             canMove = true;
             animType1.SetBool(animSpeedID, canMove);
         }
-        else { canMove = false; animType1.SetBool(animSpeedID, canMove); }
+        else {  animType1.SetBool(animSpeedID, canMove); }
     }
     public void Flip()
     {
