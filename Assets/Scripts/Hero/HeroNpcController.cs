@@ -37,14 +37,19 @@ public class HeroNpcController : MonoBehaviour
         LayerMask Main = LayerMask.GetMask("Enemies");
         RaycastHit2D hit = Physics2D.Raycast(transform.position, raycast.transform.right, distance, Main);
 
-        if(hit.collider!=null && hit.collider.CompareTag("Enemy"))
+        if (hit.collider != null && hit.collider.CompareTag("Enemy"))
         {
-
-            enemyShoot.EnemyAttack(transform.position);//referance fonks           
-            Debug.DrawLine(transform.position, transform.position + transform.right * distance, Color.red);
+            
+            enemyType1MovementAndShoot enemyComponent = hit.collider.GetComponent<enemyType1MovementAndShoot>();
+            if (enemyComponent != null)
+            {
+                enemyComponent.EnemyAttack(transform.position);
+            }
+            Debug.DrawLine(transform.position, hit.point, Color.red); // Hit noktasýna kadar çizgi çek
             StartCoroutine(FireCooldown());
-        }   
+        }
     }
+
 
     private IEnumerator FireCooldown()
     {

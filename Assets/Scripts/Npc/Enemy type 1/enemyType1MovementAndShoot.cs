@@ -11,7 +11,7 @@ public class enemyType1MovementAndShoot : MonoBehaviour
 
     private bool isAttacking;
     private bool canMove = true;
-    [SerializeField] float shootSpeed; 
+    [SerializeField] float shootSpeed;
     [SerializeField] float speedEnemy = 5f;
     [SerializeField] float attackRange = 5f;
     private Rigidbody2D rb2;
@@ -28,13 +28,13 @@ public class enemyType1MovementAndShoot : MonoBehaviour
     private void Awake()
     {
         rb2 = GetComponent<Rigidbody2D>();
-        
-        animType1 = GetComponentInChildren <Animator>();
+
+        animType1 = GetComponentInChildren<Animator>();
     }
 
     private void Start()
     {
-        
+
         AssingAnimatorID();
     }
     private void Update()
@@ -50,7 +50,7 @@ public class enemyType1MovementAndShoot : MonoBehaviour
         Debug.Log(speedVelocity);
     }
 
-   
+
 
     public void AssingAnimatorID()
     {
@@ -59,31 +59,31 @@ public class enemyType1MovementAndShoot : MonoBehaviour
     }
     public void EnemyAttack(Vector3 heroPoz)
     {
-        if (enemyGunPos != null && enemyType1Bullet != null )
-        {            
+        if (enemyGunPos != null && enemyType1Bullet != null)
+        {
             GameObject bulletInstance = Instantiate(enemyType1Bullet, enemyGunPos.position, Quaternion.identity);
             enemyType1Bullet bullet = bulletInstance.GetComponent<enemyType1Bullet>();
 
             Vector3 shootDirection = (heroPoz - enemyGunPos.position).normalized; //**
-            
+
             bullet.EnemyShoot(shootDirection * shootSpeed);
             isAttacking = true;
-            animType1.SetTrigger (animAttackID);
-            
-        } 
+            animType1.SetTrigger(animAttackID);
+
+        }
 
     }
     public void NPCTarget()
-    {       
+    {
         float distanceToTarget = Mathf.Abs(transform.position.x - targetHero.position.x);
-     
+
         if (distanceToTarget > attackRange) // tolerance
-        {           
+        {
             float directionToTargetX = Mathf.Sign(targetHero.position.x - transform.position.x);
             //Quaternion rotation = Quaternion.Euler(0, Mathf.Sign(directionToTargetX)<0 ? 180 : -180 , 0);
             Vector3 moveVector = new Vector3(directionToTargetX * speedEnemy * Time.deltaTime, 0f, 0f);
 
-            
+
             //transform.rotation = rotation;
             transform.Translate(moveVector);
             canMove = true;
@@ -97,13 +97,13 @@ public class enemyType1MovementAndShoot : MonoBehaviour
         if (transform.position.x < targetHero.transform.position.x)
         {
             transform.localScale = Vector3.one;
-            
+
             return;
         }
         else if (transform.position.x > targetHero.transform.position.x)
         {
             transform.localScale = new Vector3(-1, 1, 1);
-            
+
             return;
         }
     }

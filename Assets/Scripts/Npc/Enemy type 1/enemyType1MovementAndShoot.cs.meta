@@ -3,7 +3,11 @@ guid: 816a8e522ea66734b8ee51172022af79
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - enemyType1Bullet: {fileID: 1708150331679277626, guid: 1f11a18f5666c9348a69535be4c3065e, type: 3}
+  - enemyGunPos: {instanceID: 0}
+  - targetHero: {instanceID: 0}
+  - heroNpcController: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
