@@ -108,4 +108,11 @@ public class enemyType1MovementAndShoot : MonoBehaviour
         }
     }
 
+    public void InitAttributes(Transform gunTransform, Transform enemyTargetLocation, HeroNpcController heroNpcControllerScript)
+    {
+        this.enemyGunPos = gunTransform;
+        this.targetHero = enemyTargetLocation;
+        this.heroNpcController = heroNpcControllerScript;
+    }
+
 }

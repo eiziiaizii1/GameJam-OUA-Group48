@@ -747,7 +747,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3261525504821455639}
   m_Layer: 6
-  m_Name: GunD
+  m_Name: Gun
   m_TagString: Destroyer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
