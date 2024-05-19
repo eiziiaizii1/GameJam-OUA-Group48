@@ -108,4 +108,31 @@ public class enemyType1MovementAndShoot : MonoBehaviour
         }
     }
 
+
+    // By Aziz-------------------
+    public GameObject EnemyType1Bullet
+    {
+        get { return enemyType1Bullet; }
+        set { enemyType1Bullet = value; }
+    }
+
+    public Transform EnemyGunPos
+    {
+        get { return enemyGunPos; }
+        set { enemyGunPos = value; }
+    }
+
+    public Transform TargetHero
+    {
+        get { return targetHero; }
+        set { targetHero = value; }
+    }
+
+    public void InitAttributes(Transform enemyGunPos, Transform targetHero, HeroNpcController heroNpcController)
+    {
+        this.enemyGunPos = enemyGunPos;
+        this.targetHero = targetHero;
+        this.heroNpcController = heroNpcController;
+    }
+    // -------------------By Aziz
 }
