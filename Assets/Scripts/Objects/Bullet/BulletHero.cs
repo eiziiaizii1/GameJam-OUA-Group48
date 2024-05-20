@@ -46,6 +46,7 @@ public class BulletHero : MonoBehaviour
             return ;
         }
 
+        SoundManager.Instance.PlayEnemySound(SoundManager.Instance.EnemyHurtSound, .25f);
         BulletHitParticle();
         gameObject.SetActive(false);
         Destroy(gameObject, 2f);

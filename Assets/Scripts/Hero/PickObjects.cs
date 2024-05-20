@@ -9,7 +9,7 @@ public class PickObjects : MonoBehaviour
         IPickable pickObj = collision.gameObject.GetComponent<IPickable>();
         if (pickObj != null)
         {
-            SoundManager.Instance.PlayEnvironmentSound(SoundManager.Instance.CollectibleSound1, .2f);
+            SoundManager.Instance.PlayEnvironmentSound(SoundManager.Instance.CollectibleSound1, .1f);
             pickObj.PickItem(this.gameObject.GetComponent<HeroStorage>());
         }
     }
