@@ -26,7 +26,7 @@ public class HeroStorage : MonoBehaviour
         
         health = maxHealth;     
         //hearts = 50;
-        clocks = 10;
+        clocks = 0;
     }
     private void Start()
     {

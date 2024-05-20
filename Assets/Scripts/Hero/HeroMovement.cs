@@ -35,7 +35,7 @@ public class HeroMovement : MonoBehaviour
 
     private void Awake()
     {
-        
+        Time.timeScale = 0.4f;
         anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -146,56 +146,6 @@ public class HeroMovement : MonoBehaviour
           
         
     }
-    #region MobileMove
-    public void OnJumpTrue()
-    {
-        if (isGrounded)
-        {
-            jumpRequest = true; 
-            
-        }
-        if (!isGrounded && doubleJump)
-        {
-            
-            jumpRequest = true;
-            doubleJump = true;
-            
-        }
-    }
-    public void OnJumpFalse()
-    {
-        doubleJump = false;
-        jumpRequest = false;
-    }
-
-    private void MobileController(float direction)
-    {
-        horizontal = direction;
-        
-    }
-    public void Left()
-    {
-        if (playingMobile)
-        {
-            MobileController(-1);
-        }
-               
-    }
-    public void Right()
-    {
-        if (playingMobile)
-        {
-            MobileController(1);
-        }
-    }
-    public void Stop() 
-    {
-        if (playingMobile)
-        {
-            MobileController(0);
-        }
-
-    }
-    #endregion
+   
 
 }
