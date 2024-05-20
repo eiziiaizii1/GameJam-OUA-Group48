@@ -113,6 +113,7 @@ public class ShootBullets : MonoBehaviour
 private IEnumerator Reload()
     {
         isReloading = true; //reload start
+        SoundManager.Instance.PlayEffectSound(SoundManager.Instance.ReloadSound, 1f);
         anim.SetBool(animReloadID, true);
         yield return new WaitForSeconds(reloadTime); //reloadtime
 

@@ -21,6 +21,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioClip playerHurtSound;
     [SerializeField] private AudioClip dyingPlayerSound;
     [SerializeField] private AudioClip jumpSound;
+    [SerializeField] private AudioClip reloadSound;
 
     [SerializeField] private AudioClip enemySpawnSound;
     [SerializeField] private AudioClip dyingEnemySound;
@@ -36,6 +37,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip JumpSound { get => jumpSound; set => jumpSound = value; }
     public AudioClip CollectibleSound1 { get => collectibleSound1; set => collectibleSound1 = value; }
     public AudioClip CollectibleSound2 { get => collectibleSound2; set => collectibleSound2 = value; }
+    public AudioClip ReloadSound { get => reloadSound; set => reloadSound = value; }
 
     private void Awake()
     {

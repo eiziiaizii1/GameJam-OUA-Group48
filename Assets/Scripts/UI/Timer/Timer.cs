@@ -6,6 +6,16 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private float remainingTime;
+
+    [SerializeField] SpawnEnemies leftSpawner;
+    [SerializeField] SpawnEnemies rightSpawner;
+
+    void Start()
+    {
+        leftSpawner  = GetComponent<SpawnEnemies>();
+        rightSpawner = GetComponent<SpawnEnemies>();
+    }
+
     void Update()
     {
         if (remainingTime > 0)
@@ -14,16 +24,21 @@ public class Timer : MonoBehaviour
             if (remainingTime > 90)
             {
                 timerText.color = Color.white;
-            }else if ((remainingTime < 90) && (remainingTime > 60))
+            }
+            else if ((remainingTime < 90) && (remainingTime > 60))
             {
+                //leftSpawner.maxEnemyNumber += 2;
+                //rightSpawner.maxEnemyNumber += 2;
                 timerText.color = Color.magenta;
-            }else if ((remainingTime < 60) && (remainingTime > 30))
+            }
+            else if ((remainingTime < 60) && (remainingTime > 30))
             {
+                //leftSpawner.maxEnemyNumber+=2;
+                //rightSpawner.maxEnemyNumber+=2;
                 timerText.color = Color.red;
             }
         }
         else if(remainingTime<0)
-
         {
             remainingTime = 0;
         }

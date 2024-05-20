@@ -26,7 +26,7 @@ public class HeroStorage : MonoBehaviour
         
         health = maxHealth;     
         //hearts = 50;
-        clocks = 10;
+        //clocks = 10;
     }
     private void Start()
     {
@@ -54,8 +54,8 @@ public class HeroStorage : MonoBehaviour
     }
     public void AddClocks()
     {
-        clocks++;
-        BaseUI.instance.UpdateClocks(clocks);
+        //clocks++;
+        //BaseUI.instance.UpdateClocks(clocks);
     }
 
     public void HeroDeath()
