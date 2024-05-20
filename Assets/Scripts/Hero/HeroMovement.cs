@@ -36,7 +36,7 @@ public class HeroMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        Debug.Log(doubleJump);
+        
         IsGrounded(); 
 
         if (jumpRequest) 

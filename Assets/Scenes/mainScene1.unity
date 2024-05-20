@@ -7039,7 +7039,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a551e75b3b0a8e345bb8ce564a068182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroHitShake: 2
   HealthBar: {fileID: 7789408588942171252}
   body: {fileID: 3246807245404912155}
   maxHealth: 100
@@ -7106,7 +7105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a551e75b3b0a8e345bb8ce564a068182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroHitShake: 2
   HealthBar: {fileID: 4615011234196407389}
   body: {fileID: 6444932337428336579}
   maxHealth: 100
@@ -8293,7 +8291,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a551e75b3b0a8e345bb8ce564a068182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroHitShake: 2
   HealthBar: {fileID: 1951391277480347000}
   body: {fileID: 7810730815355425773}
   maxHealth: 100

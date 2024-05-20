@@ -23,8 +23,7 @@ public class HeroStorage : MonoBehaviour
 
     public void TakeDamage(int Takedamage)
     {
-        health -= Takedamage;
-        Debug.Log(health);
+        health -= Takedamage;      
         healthSlider.value = health;
         SoundManager.Instance.PlayEffectSound(SoundManager.Instance.PlayerHurtSound, 0.15f);
         HeroDeath();

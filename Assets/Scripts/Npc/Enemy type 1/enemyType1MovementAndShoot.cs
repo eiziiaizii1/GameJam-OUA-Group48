@@ -9,7 +9,7 @@ public class enemyType1MovementAndShoot : MonoBehaviour
     [SerializeField] Transform targetHero;
     public HeroNpcController heroNpcController;
 
-    private bool isAttacking;
+    
     private bool canMove = true;
     [SerializeField] float shootSpeed;
     [SerializeField] float speedEnemy = 5f;
@@ -47,7 +47,7 @@ public class enemyType1MovementAndShoot : MonoBehaviour
         }
 
         speedVelocity = rb2.velocity.x;
-        Debug.Log(speedVelocity);
+        
     }
 
 
@@ -67,7 +67,7 @@ public class enemyType1MovementAndShoot : MonoBehaviour
             Vector3 shootDirection = (heroPoz - enemyGunPos.position).normalized; //**
 
             bullet.EnemyShoot(shootDirection * shootSpeed);
-            isAttacking = true;
+            
             animType1.SetTrigger(animAttackID);
 
         }

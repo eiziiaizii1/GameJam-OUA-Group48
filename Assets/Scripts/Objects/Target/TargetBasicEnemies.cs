@@ -4,8 +4,8 @@ using UnityEngine.UI;
 
 public class TargetBasicEnemies : MonoBehaviour, IDamagetable
 {
-    private Rigidbody2D enemyRb2;
-    [SerializeField] float heroHitShake = 2f;
+    
+    
     public Slider HealthBar;
     [SerializeField] private GameObject body; 
 
@@ -20,7 +20,7 @@ public class TargetBasicEnemies : MonoBehaviour, IDamagetable
     void Awake()
     {
         health = maxHealth;
-        enemyRb2 = GetComponent<Rigidbody2D>();
+        
         anim = GetComponentInChildren<Animator>();
     }
     void Start()

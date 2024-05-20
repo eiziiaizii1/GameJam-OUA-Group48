@@ -100,6 +100,6 @@ public class SoundManager : MonoBehaviour
         EffectSource.volume = effectVolume;
 
         EffectSource.PlayOneShot(clipToPlay);
-        Debug.Log("EFFECT PLAYEDDDD");
+        
     }
 }
