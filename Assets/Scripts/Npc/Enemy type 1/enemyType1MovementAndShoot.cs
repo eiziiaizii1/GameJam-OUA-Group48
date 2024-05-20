@@ -75,6 +75,7 @@ public class enemyType1MovementAndShoot : MonoBehaviour
     }
     public void NPCTarget()
     {
+        if (targetHero == null) return;
         float distanceToTarget = Mathf.Abs(transform.position.x - targetHero.position.x);
 
         if (distanceToTarget > attackRange) // tolerance
@@ -93,6 +94,9 @@ public class enemyType1MovementAndShoot : MonoBehaviour
     }
     public void Flip()
     {
+        if (transform == null) return;
+
+        if (targetHero == null) return;
 
         if (transform.position.x < targetHero.transform.position.x)
         {

@@ -15,6 +15,12 @@ public class HeroMovement : MonoBehaviour
     [SerializeField] private GameObject GroundCheck;
     [SerializeField] private float GroundCheckRadius;
     [SerializeField] private LayerMask GroundLayer;
+
+    //animator
+    private int animSpeedID;
+    private Animator anim;
+
+
     
     private bool isGrounded;
     private bool doubleJump;
@@ -27,11 +33,17 @@ public class HeroMovement : MonoBehaviour
 
     private float vertical;
 
-
+    private void Awake()
+    {
+        
+        anim = GetComponentInChildren<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        AssingHeroAnimatorID();
+        
     }
 
     void FixedUpdate()
@@ -61,7 +73,7 @@ public class HeroMovement : MonoBehaviour
                 OnJumpButtonPressed(); 
             }
         }
-
+        
         Flip();
     }
     private void Move()
@@ -71,6 +83,13 @@ public class HeroMovement : MonoBehaviour
             horizontal = Input.GetAxis("Horizontal");
         }
         rb.velocity = new Vector2(horizontal * speed , rb.velocity.y); 
+        anim.SetFloat(animSpeedID, Mathf.Abs( horizontal));
+        
+    }
+    public void AssingHeroAnimatorID()
+    {
+        animSpeedID = Animator.StringToHash("Speed");
+        
     }
     private void Jump()
     {
@@ -81,8 +100,19 @@ public class HeroMovement : MonoBehaviour
         }
         isGrounded = false; 
     }
-   
-    
+
+    public void FlipTowards(Vector2 direction)
+    {
+        if (direction.x > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1); // Saða bak
+        }
+        else if (direction.x < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1); // Sola bak
+        }
+    }
+
     public void Flip()
     {
         
@@ -141,7 +171,7 @@ public class HeroMovement : MonoBehaviour
     private void MobileController(float direction)
     {
         horizontal = direction;
-        Debug.Log(horizontal);
+        
     }
     public void Left()
     {
