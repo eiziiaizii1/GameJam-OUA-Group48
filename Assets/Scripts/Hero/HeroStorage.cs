@@ -26,6 +26,7 @@ public class HeroStorage : MonoBehaviour
         health -= Takedamage;
         Debug.Log(health);
         healthSlider.value = health;
+        SoundManager.Instance.PlayEffectSound(SoundManager.Instance.PlayerHurtSound, 0.15f);
         HeroDeath();
     }
     public void AddHeart()
@@ -44,7 +45,7 @@ public class HeroStorage : MonoBehaviour
     {
         if (health <= 0) 
         {
-            
+            SoundManager.Instance.PlayEffectSound(SoundManager.Instance.DyingPlayerSound, 0.3f);
             gameObject.SetActive(false);
         }
     }

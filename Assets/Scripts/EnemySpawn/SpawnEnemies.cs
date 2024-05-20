@@ -30,7 +30,8 @@ public class SpawnEnemies : MonoBehaviour
         {
             int randomEnemyIndex = Random.Range(0, enemies.Count);
             GameObject newEnemy = Instantiate(enemies[randomEnemyIndex], transform.position, Quaternion.identity);
-            //SoundManager.Instance.PlayEffectSound(SoundManager.Instance.EnemySpawnSound, 0.01f);
+            //SoundManager.Instance.PlayEffectSound(SoundManager.Instance.DyingPlayerSound, 0.01f);
+
             Transform gunTransform = newEnemy.transform.Find("Gun");
 
             newEnemy.GetComponent<enemyType1MovementAndShoot>().InitAttributes(gunTransform, enemyTargetLocation,heroNpcControllerScript);

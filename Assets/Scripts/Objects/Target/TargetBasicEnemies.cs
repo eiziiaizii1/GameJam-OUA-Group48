@@ -46,8 +46,8 @@ public class TargetBasicEnemies : MonoBehaviour, IDamagetable
 
             anim.SetBool(animDeadID, true);
             body.transform.Translate(moveVector);
+            SoundManager.Instance.PlayEnemySound(SoundManager.Instance.DyingEnemySound, .1f);
             StartCoroutine(Death(2f));
-            
         }
         
     }

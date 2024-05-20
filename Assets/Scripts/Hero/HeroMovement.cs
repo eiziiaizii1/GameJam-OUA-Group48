@@ -43,7 +43,8 @@ public class HeroMovement : MonoBehaviour
         {
             if (isGrounded || doubleJump) 
             {
-                Jump(); 
+                Jump();
+                SoundManager.Instance.PlayEffectSound(SoundManager.Instance.JumpSound, 0.4f);
             }
             jumpRequest = false; 
         }

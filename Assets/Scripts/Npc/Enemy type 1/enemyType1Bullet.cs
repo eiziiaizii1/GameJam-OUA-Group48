@@ -30,7 +30,6 @@ public class enemyType1Bullet : MonoBehaviour
         }
         else
         {
-           
             Destroy(gameObject, 6f);
         }
     }
