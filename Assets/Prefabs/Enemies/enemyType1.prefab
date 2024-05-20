@@ -564,7 +564,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a551e75b3b0a8e345bb8ce564a068182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroHitShake: 2
   HealthBar: {fileID: 2341328533237544131}
   body: {fileID: 6273487520787997270}
   maxHealth: 100
@@ -704,7 +703,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 9
   m_Sprite: {fileID: 1172594944, guid: 486063a73986dec4f982e60efbba17a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

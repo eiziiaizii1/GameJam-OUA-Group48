@@ -87,7 +87,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8a478d19e7133974081e298f1feb9bef, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -107,7 +107,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 9
   m_Sprite: {fileID: 21300000, guid: c1a5e7e79e4f67b4887e43e0246d6c26, type: 3}
   m_Color: {r: 0.16051137, g: 1, b: 0, a: 1}
   m_FlipX: 0
@@ -208,7 +208,7 @@ VisualEffect:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8852623288229371939}
   m_Enabled: 1
-  m_Asset: {fileID: 8926484042661614526, guid: da310c9ee14adfc4f9e3f8fa97b86284, type: 3}
+  m_Asset: {fileID: 0}
   m_InitialEventName: 
   m_InitialEventNameOverriden: 1
   m_StartSeed: 0
